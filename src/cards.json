@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "One",
+        "image": "https://scrambledeggsdotorg.files.wordpress.com/2012/04/one.png"
+    },
+    {
+        "id": 2,
+        "name": "Two",
+        "image": "http://www.clker.com/cliparts/y/G/s/h/j/O/two-md.png"
+    },
+    {
+        "id": 3,
+        "name": "Three",
+        "image": "http://www.clker.com/cliparts/Z/9/b/Z/K/I/number-three-hi.png"
+    }
+]
