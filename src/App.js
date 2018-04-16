@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import Wrapper from "./components/wrapper";
-import Nav from "./components/nav";
+import Nav from "./components/Nav";
+import Header from "./components/header";
 import Game from "./components/game";
 import Card from "./components/Card";
 import cards from "./cards.json";
-
+// import Footer from "./components/footer";
 
 class App extends Component {
 
@@ -14,7 +15,7 @@ class App extends Component {
     guessedCards: cards,
     currentScore: 0,
     highScore: 0,
-    note: "WOW. so game. much fun."
+    note: "WOW. so game. much fun. don't click the same photo twice or you lose."
   };
 
   // sort cards in random order
@@ -35,7 +36,7 @@ class App extends Component {
         guessedCards: cards,
         highScore: (this.state.currentScore > this.state.highScore) ? this.state.currentScore : this.state.highScore,
         currentScore: 0,
-        note: "nope. "
+        note: "nope. click a photo to start over."
       })
       // else, correct guess. Set guessedCards array to new filterd list
     } else {
@@ -54,9 +55,11 @@ class App extends Component {
     return (
       <Wrapper>
         <Nav
-          note={this.state.note}
           currentScore={this.state.currentScore}
           highScore={this.state.highScore}
+        />
+        <Header
+          note={this.state.note}
         />
         <Game>
           {this.state.cards.map(card => (
@@ -69,6 +72,7 @@ class App extends Component {
             />
           ))}
         </Game>
+        {/* <Footer /> */}
       </Wrapper>
     );
   }
